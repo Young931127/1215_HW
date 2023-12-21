@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="icon" href="a5hsk-k1gfu-001.ico" type="image/x-icon">
+<body>
+
+<script>
+    var rand = Math.floor((Math.random() * 10) + 1); 
+
+    while (true) {
+        var userGuess = prompt("Guess the number between 1 and 10:");
+
+       
+        if (userGuess === null) {
+            alert("Game over. You clicked Cancel.");
+            break;
+        }
+
+        
+        userGuess = parseInt(userGuess);
+
+        
+        if (userGuess === rand) {
+            alert("Congratulations! You guessed the correct number.");
+            break;
+        } else {
+            alert("Wrong guess. Try again!");
+        }
+    }
+</script>
+
+</body>
+</html>
